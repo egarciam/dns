@@ -1,0 +1,4 @@
+zone "yayito.local" {
+    type master;
+    file "/etc/bind/zones/db.yayito.local";
+};
