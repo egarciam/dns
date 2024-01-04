@@ -9,11 +9,13 @@ RUN apt-get install -y \
   bind9 \
   bind9utils \
   bind9-doc 
-RUN apt-get install -y net-tools
-RUN apt-get install -y iproute2
-RUN apt-get install -y tcpdump 
-RUN apt-get install -y dnsutils
-RUN apt-get install -y iputils-ping
+RUN apt-get install -y net-tools \
+    iproute2 \
+    tcpdump \
+    dnsutils \
+    iputils-ping \
+    vim
+
 
 # Enable IPv4
 RUN sed -i 's/OPTIONS=.*/OPTIONS="-4 -u bind"/' /etc/default/bind9
